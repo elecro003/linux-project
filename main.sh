@@ -56,8 +56,16 @@ do
             fi
             ;;
         4)
-            if [ -f "$WORD_FINDER" ]; then
-                $WORD_FINDER
+           if [ -f "$WORD_FINDER" ]; then
+                echo -n "🔍 검색할 단어를 입력하세요: "
+                read search_word
+                
+                if [ -z "$search_word" ]; then
+                    echo "⚠️ 검색어를 입력하지 않았습니다."
+                else
+                    # 입력받은 단어를 스크립트의 인자($1)로 전달
+                    $WORD_FINDER "$search_word"
+                fi
             else
                 echo "오류: $WORD_FINDER 파일을 찾을 수 없습니다."
             fi
