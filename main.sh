@@ -3,7 +3,7 @@
 NET_TOOL="./network-tool.sh"
 GIT_TOOL="./git-tool.sh"
 
-C_CALC="./scripts/c_calculator.sh".
+C_CALC="./scripts/c_calculator.sh"
 WORD_FINDER="./scripts/word_finder.sh"
 
 # 실행 권한 부여 함수 (모든 스크립트에 권한 주기)
